@@ -8,3 +8,9 @@
     margin: 0px;
   }
 }
+
+@layer components {
+  .page {
+    @apply p-5 border-r-[1rem] rounded-r-3xl mb-8 bg-my-black;
+  }
+}

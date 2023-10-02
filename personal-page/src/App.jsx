@@ -1,24 +1,63 @@
-import Navbar from "./components/Navbar";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+import Projects from "./pages/projects/Projects";
 import headerImg from "./assets/header-photo.jpg";
 import { motion } from "framer-motion";
 
+import Navbar from "./components/Navbar";
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 function App() {
+  const pagesVariants = {
+    hidden: {
+      x: "-98vw",
+    },
+    visible: {
+      x: 0,
+      transition: {
+        type: "spring",
+        delay: 0.2,
+        duration: 1,
+      },
+    },
+  };
+
+  const pathVariants = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        delay: 3,
+        duration: 2,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <>
       <header
         className="bg-cover bg-center min-h-screen"
         style={{ backgroundImage: `url(${headerImg})` }}
       >
-        <Navbar />
-        <div className="max-w-lg ">
+        <Navbar scrollToSection={scrollToSection} />
+        <div className="max-w-lg px-6 py-24 flex flex-col justify-between min-h-screen sm:block sm:px-12 sm:py-32">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 2 }}
-            className="text-white text-6xl mb-5"
+            className="text-white text-4xl mb-5 md:text-6xl"
           >
             Hello<span className="text-my-yellow">,</span> my name is{" "}
             <span className="text-my-yellow">Adam</span>
@@ -27,18 +66,20 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 2 }}
-            className="text-white text-2xl"
+            className="text-white text-xl md:text-3xl"
           >
-            I am self taught web developer and this is my portfolio page. I’m
-            honored, you visited my site. Hope you like it :)
+            I am self taught{" "}
+            <span className="text-my-yellow">front-end web developer</span> from
+            Slovakia, currently based in Brno and this is my portfolio page.
+            Hope you like it :)
           </motion.p>
         </div>
       </header>
-      <main className="bg-my-black ">
-        <About />
-        <Projects />
-        <Contact />
-      </main>
+      <motion.main className="bg-black pt-2 pr-1">
+        <About pagesVariants={pagesVariants} />
+        <Projects pagesVariants={pagesVariants} />
+        <Contact pagesVariants={pagesVariants} />
+      </motion.main>
     </>
   );
 }
