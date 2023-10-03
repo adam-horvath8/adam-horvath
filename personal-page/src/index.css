@@ -11,6 +11,9 @@
 
 @layer components {
   .page {
-    @apply p-5 border-r-[1rem] rounded-r-3xl mb-8 bg-my-black;
+    @apply p-5 border-r-[1rem] rounded-r-3xl mb-8 bg-my-black md:p-20;
+  }
+  .page-heading {
+    @apply text-4xl text-my-yellow text-center py-4 border-b mb-8 font-secondary;
   }
 }

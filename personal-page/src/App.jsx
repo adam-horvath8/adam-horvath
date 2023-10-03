@@ -1,10 +1,13 @@
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Projects from "./pages/projects/Projects";
-import headerImg from "./assets/header-photo.jpg";
+import headerImg from "./assets/lift.jpg";
 import { motion } from "framer-motion";
 
 import Navbar from "./components/Navbar";
+import ButtonSecondary from "./components/ButtonSecondary";
+
+import download from "./assets/download.svg";
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
@@ -52,30 +55,33 @@ function App() {
         style={{ backgroundImage: `url(${headerImg})` }}
       >
         <Navbar scrollToSection={scrollToSection} />
-        <div className="max-w-lg px-6 py-24 flex flex-col justify-between min-h-screen sm:block sm:px-12 sm:py-32">
+        <div className="max-w-lg px-6 py-24 flex flex-col justify-between min-h-screen sd:block sm:px-12 sm:py-32">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 2 }}
-            className="text-white text-4xl mb-5 md:text-6xl"
+            className="text-white text-4xl mb-5 md:text-7xl font-secondary"
           >
             Hello<span className="text-my-yellow">,</span> my name is{" "}
             <span className="text-my-yellow">Adam</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 2 }}
-            className="text-white text-xl md:text-3xl"
-          >
-            I am self taught{" "}
-            <span className="text-my-yellow">front-end web developer</span> from
-            Slovakia, currently based in Brno and this is my portfolio page.
-            Hope you like it :)
-          </motion.p>
+          <div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2, duration: 2 }}
+              className="text-white text-xl md:text-3xl font-primary mb-4"
+            >
+              I am self taught{" "}
+              <span className="text-my-yellow">front-end web developer</span>{" "}
+              from Slovakia, currently based in Brno and this is my portfolio
+              page. Hope you like it :)
+            </motion.p>
+            <ButtonSecondary text="Resume" icon={download} />
+          </div>
         </div>
       </header>
-      <motion.main className="bg-black pt-2 pr-1">
+      <motion.main className="bg-black pt-2 pr-1 font-primary">
         <About pagesVariants={pagesVariants} />
         <Projects pagesVariants={pagesVariants} />
         <Contact pagesVariants={pagesVariants} />

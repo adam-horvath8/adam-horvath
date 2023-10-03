@@ -23,7 +23,7 @@ const Contact = ({ pagesVariants }) => {
       animate={mainControls}
       className="page"
     >
-      <h2 className="text-5xl text-my-yellow text-center py-4 border-b">
+      <h2 className="page-heading">
         Contact
       </h2>
       <motion.p className="text-white">

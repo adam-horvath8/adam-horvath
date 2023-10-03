@@ -8,15 +8,16 @@ import weatherMobile from "../assets/weather-mobile.png";
 const projectsData = [
   {
     img1: {
-      url: cartMobile,
-      alt: "dsa",
-    },
-    img2: {
       url: cartDesktop,
       alt: "dsa",
     },
+    img2: {
+      url: cartMobile,
+      alt: "dsa",
+    },
     title: "Shoping Cart",
-    description: "fdsf",
+    description:
+      "E-shop Atlantis was a shopping cart project that helped me elevate my React skills. While doing this web page I learned to employ react routing with React Router library. I deepned my understanding of React states, fetching data in react and useEffect hook. As an state management tool I used Context API.",
     technologies: [],
   },
   {
@@ -28,8 +29,8 @@ const projectsData = [
       url: cvMobile,
       alt: "",
     },
-    title: "CV Application",
-    description: "",
+    title: "CV App",
+    description: "CV Application is a form that automatically populates your resume. This project was my first encounter with React states. I learned how state in React works and how to use useState hook. I also got to know why and how to lift the state up to share state between components.",
     technologies: [],
   },
   {
@@ -41,8 +42,8 @@ const projectsData = [
       url: weatherMobile,
       alt: "",
     },
-    title: "Weather Application",
-    description: "",
+    title: "Weather App",
+    description: "Weather Application is an app that I made using vanilla JS before I learned React. With this project I got deeper understanding of Object Oriented Programing. It was also my first encounter with fetching data from an open public API.",
     technologies: [],
   },
 ];

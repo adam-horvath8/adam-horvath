@@ -24,9 +24,7 @@ const Projects = ({ pagesVariants }) => {
       animate={mainControls}
       className="page"
     >
-      <h2 className="text-5xl text-my-yellow text-center py-4 border-b">
-        Projects
-      </h2>
+      <h2 className="page-heading">Projects</h2>
       {projectsData.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}

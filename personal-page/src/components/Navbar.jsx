@@ -12,7 +12,7 @@ const Navbar = ({ scrollToSection }) => {
       className="flex justify-end fixed w-screen z-10 bg-gradient-to-r from-transparent to-my-blue "
    
     >
-      <ul className="flex justify-evenly p-1 pr-5 ">
+      <ul className="flex justify-evenly p-1 pr-5 font-primary">
         <li onClick={() => scrollToSection("about")}>
           <ButtonPrimary text="About" />
         </li>

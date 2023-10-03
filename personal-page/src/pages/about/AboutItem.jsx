@@ -20,12 +20,18 @@ const AboutItem = ({ item }) => {
       variants={itemsVariants}
       initial="hidden"
       animate={mainControls}
+      className="text-white p-1 mb-5 lg:flex"
     >
-      <img src={item.url} alt={item.alt} />
-      <div>
-        <h3>{item.title}</h3>
-        <p>{item.text} </p>
+      <img
+        className="mb-4 shadow-yellow lg:w-1/2"
+        src={item.url}
+        alt={item.alt}
+      />
+      <div className="mb-4 flex flex-col justify-center">
+        <h3 className="text-my-yellow text-2xl text-center">{item.title}</h3>
+        <p className="text-lg text-center lg:px-10 pt-3">{item.text} </p>
       </div>
+      <hr />
     </motion.div>
   );
 };
