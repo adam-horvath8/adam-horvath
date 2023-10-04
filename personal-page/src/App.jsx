@@ -32,22 +32,6 @@ function App() {
     },
   };
 
-  const pathVariants = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-    },
-    visible: {
-      opacity: 1,
-      pathLength: 1,
-      transition: {
-        delay: 3,
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <>
       <header
@@ -57,28 +41,27 @@ function App() {
         <Navbar scrollToSection={scrollToSection} />
         <div className="max-w-lg px-6 py-24 flex flex-col justify-between min-h-screen sd:block sm:px-12 sm:py-32">
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 2 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 1.5 }}
             className="text-white text-4xl mb-5 md:text-7xl font-secondary"
           >
             Hello<span className="text-my-yellow">,</span> my name is{" "}
             <span className="text-my-yellow">Adam</span>
           </motion.h1>
-          <div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 2 }}
-              className="text-white text-xl md:text-3xl font-primary mb-4"
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, duration: 1.5 }}
+          >
+            <p className="text-white text-xl md:text-3xl font-primary mb-4">
               I am self taught{" "}
               <span className="text-my-yellow">front-end web developer</span>{" "}
               from Slovakia, currently based in Brno and this is my portfolio
               page. Hope you like it :)
-            </motion.p>
+            </p>
             <ButtonSecondary text="Resume" icon={download} />
-          </div>
+          </motion.div>
         </div>
       </header>
       <motion.main className="bg-black pt-2 pr-1 font-primary">

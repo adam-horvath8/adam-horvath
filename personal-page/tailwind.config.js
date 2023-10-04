@@ -14,7 +14,8 @@ export default {
         secondary: ["Martian Mono", "monospace"], // 'Martian Mono' is the secondary font from Google Fonts
       },
       boxShadow: {
-        "yellow": "0px 0px 15px rgba(246, 174, 45, 1)",
+        yellow: "0px 0px 15px rgba(246, 174, 45, 1)",
+        black: "0px 0px 5px  rgba(1, 28, 39, 1)",
       },
     },
   },

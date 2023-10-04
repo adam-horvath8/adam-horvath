@@ -8,7 +8,7 @@ const Navbar = ({ scrollToSection }) => {
     <motion.nav
       initial={{ y: "-100vh" }}
       animate={{ y: 0 }}
-      transition={{ type: "tween", delay: 1, duration: 2 }}
+      transition={{ type: "tween", delay: 1.6, duration: 2 }}
       className="flex justify-end fixed w-screen z-10 bg-gradient-to-r from-transparent to-my-blue "
    
     >
