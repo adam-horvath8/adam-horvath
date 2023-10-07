@@ -39,11 +39,14 @@ const ProjectCard = ({ project }) => {
             alt={project.img1.alt}
           />
         </div>
-        <div className="text-white flex-1 flex flex-col justify-between text-center pt-8 lg:text-left">
-          <p className="text-lg">{project.description}</p>
-          {/* {project.technologies.map((tech) => (
-            <SkillsProject key={tech.name} tech={tech} />
-          ))} */}
+        <div className="text-white flex-1 flex flex-col justify-between  text-center pt-8 lg:text-left">
+          <p className="text-lg mb-2">{project.description}</p>
+          <div className="flex">
+            {project.technologies.map((tech) => (
+              <SkillsProject key={tech.name} tech={tech} />
+            ))}
+          </div>
+
           <div className="my-6 flex ">
             <div className="flex-1 flex justify-center">
               <ButtonSecondary text="Code" icon={gitHub} />

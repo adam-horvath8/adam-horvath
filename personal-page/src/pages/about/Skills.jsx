@@ -38,11 +38,11 @@ const Skills = () => {
       ref={ref}
     >
       <h2 className="text-my-yellow text-3xl text-center m-10">Skills</h2>
-      <div className="flex w-full flex-wrap justify-evenly content-start p-4 bg-my-yellow md:p-16 rounded-3xl">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-4 bg-my-yellow md:p-16 rounded-3xl">
         {skillsData.map((skill, index) => (
           <motion.div
             key={skill.name}
-            className="flex flex-col justify-between items-center m-4 border-2 shadow-black rounded-xl p-8"
+            className="flex flex-col justify-between items-center m-4 border-2 shadow-black rounded-xl p-2 md:p-8"
             variants={skillsVariants}
             initial="hidden"
             whileInView="visible"
@@ -54,7 +54,7 @@ const Skills = () => {
             <img
               src={skill.url}
               alt={skill.alt}
-              className="max-w-[6rem] mb-4"
+              className="max-w-[5rem] mb-4"
             />
             <span className="text-white text-lg drop-shadow-lg">{skill.name}</span>
           </motion.div>

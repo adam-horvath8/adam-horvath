@@ -8,6 +8,8 @@ import reactBlack from "../assets/react-black.svg";
 import jsBlack from "../assets/js-black.svg";
 import webpackBlack from "../assets/webpack-black.svg";
 import reacRouterBlack from "../assets/reactrouter-black.svg";
+import memoryDesktop from "../assets/memory-desktop.png";
+import memoryMobile from "../assets/memory-mobile.png";
 
 const projectsData = [
   {
@@ -65,6 +67,20 @@ const projectsData = [
         alt: "Webpack",
       },
     ],
+  },
+  {
+    img1: {
+      url: memoryDesktop,
+      alt: "",
+    },
+    img2: {
+      url: memoryMobile,
+      alt: "",
+    },
+    title: "Memory Cards",
+    description:
+      "Weather Application is an app that I made using vanilla JS before I learned React. With this project I got deeper understanding of Object Oriented Programing. It was also my first encounter with fetching data from an open public API.",
+    technologies: [{ url: reactBlack, name: "React" }],
   },
 ];
 
