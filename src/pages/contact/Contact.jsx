@@ -46,10 +46,10 @@ const Contact = ({ pagesVariants }) => {
             />
           </a>
           <div>
-            <a href="www.linkedin.com/in/adam--horvathh">
+            <a href="https://linkedin.com/in/adam--horvathh" target="_blank" rel="noopener noreferrer">
               <img src={linkedIn} alt="" />
             </a>
-            <a href="">
+            <a href="https://github.com/adam-horvath8" target="_blank" rel="noopener noreferrer">
               <img src={gitHub} alt="" />
             </a>
           </div>
