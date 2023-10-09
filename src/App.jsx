@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import ButtonSecondary from "./components/ButtonSecondary";
 
-import download from "./assets/download.svg";
+import cvImg from "./assets/cv-img.svg";
+import cv from "/cv-adam-horvath.pdf";
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
@@ -60,7 +61,9 @@ function App() {
               from Slovakia, currently based in Brno and this is my portfolio
               page. Hope you like it :)
             </p>
-            <ButtonSecondary text="Resume" icon={download} />
+            <a href={cv} target="_blank" rel="noopener noreferrer">
+              <ButtonSecondary text="Resume" icon={cvImg} />
+            </a>
           </motion.div>
         </div>
       </header>

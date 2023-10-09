@@ -32,6 +32,8 @@ const projectsData = [
         alt: "React Router",
       },
     ],
+    live: "https://atlantis-eshop.netlify.app",
+    code: "https://github.com/adam-horvath8/Atlantis-shop",
   },
   {
     img1: {
@@ -46,6 +48,8 @@ const projectsData = [
     description:
       "CV Application is a form that automatically populates your resume. This project was my first encounter with React states. I learned how state in React works and how to use useState hook. I also got to know why and how to lift the state up to share state between components.",
     technologies: [{ url: reactBlack, name: "React" }],
+    live: "https://cv-super-maker.netlify.app",
+    code: "https://github.com/adam-horvath8/CV-app",
   },
   {
     img1: {
@@ -67,6 +71,8 @@ const projectsData = [
         alt: "Webpack",
       },
     ],
+    live: "https://hi-weather-app.netlify.app",
+    code: "https://github.com/adam-horvath8/Weather-app",
   },
   {
     img1: {
@@ -81,6 +87,8 @@ const projectsData = [
     description:
       "Weather Application is an app that I made using vanilla JS before I learned React. With this project I got deeper understanding of Object Oriented Programing. It was also my first encounter with fetching data from an open public API.",
     technologies: [{ url: reactBlack, name: "React" }],
+    live: "https://cars-memory-game.netlify.app",
+    code: "https://github.com/adam-horvath8/Memory-card",
   },
 ];
 
