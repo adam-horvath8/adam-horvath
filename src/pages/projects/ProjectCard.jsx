@@ -4,7 +4,7 @@ import itemsVariants from "../../data/itemsAnimation";
 import ButtonSecondary from "../../components/ButtonSecondary";
 import gitHub from "../../assets/git-hub.svg";
 import monitor from "../../assets/monitor.svg";
-import SkillsProject from "./skillsProject";
+import SkillsProject from "./SkillsProject";
 
 const ProjectCard = ({ project }) => {
   const ref = useRef(null);
