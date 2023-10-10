@@ -1,5 +1,5 @@
 import school from "../assets/school.jpg";
-import sea from "../assets/sea.jpg";
+import sea from "../assets/sea1400.jpg";
 import odin from "../assets/odin.png";
 import coffe from "../assets/coffe.jpg";
 

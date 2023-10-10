@@ -1,7 +1,7 @@
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Projects from "./pages/projects/Projects";
-import headerImg from "./assets/lift.jpg";
+import headerImg from "./assets/lift1400.jpg";
 import { motion } from "framer-motion";
 
 import Navbar from "./components/Navbar";
