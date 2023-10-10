@@ -2,17 +2,20 @@ import React, { forwardRef } from "react";
 import ButtonPrimary from "./ButtonPrimary";
 import { motion } from "framer-motion";
 
-
 const Navbar = ({ scrollToSection }) => {
   return (
     <motion.nav
       initial={{ y: "-100vh" }}
       animate={{ y: 0 }}
-      transition={{ type: "tween", delay: 1.6, duration: 2 }}
-      className="flex justify-end fixed w-screen z-10 bg-gradient-to-r from-transparent to-my-blue "
-   
+      transition={{ type: "tween", delay: 1, duration: 1.5 }}
+      className="flex justify-end fixed w-screen z-10 bg-gradient-to-r from-transparent to-my-blue"
     >
-      <ul className="flex justify-evenly p-1 pr-5 font-primary">
+      <motion.ul
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", delay: 2.5, duration: 1 }}
+        className="flex justify-evenly p-1 pr-5 font-primary"
+      >
         <li onClick={() => scrollToSection("about")}>
           <ButtonPrimary text="About" />
         </li>
@@ -22,7 +25,7 @@ const Navbar = ({ scrollToSection }) => {
         <li onClick={() => scrollToSection("contact")}>
           <ButtonPrimary text="Contact" />
         </li>
-      </ul>
+      </motion.ul>
     </motion.nav>
   );
 };

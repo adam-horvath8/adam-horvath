@@ -15,11 +15,11 @@ const projectsData = [
   {
     img1: {
       url: cartDesktop,
-      alt: "dsa",
+      alt: "e-shop picture",
     },
     img2: {
       url: cartMobile,
-      alt: "dsa",
+      alt: "e-shop picture",
     },
     title: "Atlantis e-shop",
     description:
@@ -38,11 +38,11 @@ const projectsData = [
   {
     img1: {
       url: cvDesktop,
-      alt: "",
+      alt: "cv application picture",
     },
     img2: {
       url: cvMobile,
-      alt: "",
+      alt: "cv application picture",
     },
     title: "CV App",
     description:
@@ -54,11 +54,11 @@ const projectsData = [
   {
     img1: {
       url: weatherDesktop,
-      alt: "",
+      alt: "Weather application picture",
     },
     img2: {
       url: weatherMobile,
-      alt: "",
+      alt: "Weather application picture",
     },
     title: "Weather App",
     description:
@@ -77,11 +77,11 @@ const projectsData = [
   {
     img1: {
       url: memoryDesktop,
-      alt: "",
+      alt: "Memory card game picture",
     },
     img2: {
       url: memoryMobile,
-      alt: "",
+      alt: "Memory card game picture",
     },
     title: "Memory Cards",
     description:

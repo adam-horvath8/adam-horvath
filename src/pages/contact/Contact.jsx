@@ -33,26 +33,42 @@ const Contact = ({ pagesVariants }) => {
       <h2 className="page-heading">Contact</h2>
 
       <motion.div>
-        <h3>Thanks for visiting my web site!</h3>
-        <p>Let's get in touch</p>
-        <div>
-          <a href={`tel:${contactData.tel}`}>
+        <h3 className="text-my-yellow text-center text-xl">
+          Thanks for visiting my web site!
+        </h3>
+        <p className="text-my-gray text-center m-5 text-lg">
+          Let's get in touch
+        </p>
+        <div className="flex flex-wrap ">
+          <a className="w-full md:w-1/2 lg:w-1/4" href={`tel:${contactData.tel}`}>
             <ContactCard icon={contactData.telIcon} text={contactData.tel} />
           </a>
-          <a href={`mailto:${contactData.email}`}>
+          <a className="w-full md:w-1/2 lg:w-1/4" href={`mailto:${contactData.email}`}>
             <ContactCard
               icon={contactData.emailIcon}
               text={contactData.email}
             />
           </a>
-          <div>
-            <a href="https://linkedin.com/in/adam--horvathh" target="_blank" rel="noopener noreferrer">
-              <img src={linkedIn} alt="" />
-            </a>
-            <a href="https://github.com/adam-horvath8" target="_blank" rel="noopener noreferrer">
-              <img src={gitHub} alt="" />
-            </a>
-          </div>
+
+          <a
+            className="w-1/2 lg:w-1/4"
+            href="https://linkedin.com/in/adam--horvathh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ContactCard
+              icon={contactData.linkedIcon}
+              text={contactData.linked}
+            />
+          </a>
+          <a
+            className="w-1/2 lg:w-1/4"
+            href="https://github.com/adam-horvath8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ContactCard icon={contactData.gitIcon} text={contactData.git} />
+          </a>
         </div>
       </motion.div>
     </motion.div>

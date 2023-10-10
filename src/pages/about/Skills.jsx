@@ -56,7 +56,9 @@ const Skills = () => {
               alt={skill.alt}
               className="max-w-[5rem] mb-4"
             />
-            <span className="text-white text-lg drop-shadow-lg">{skill.name}</span>
+            <span className="text-my-gray text-lg text-center drop-shadow-lg">
+              {skill.name}
+            </span>
           </motion.div>
         ))}
       </div>

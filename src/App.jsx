@@ -45,7 +45,7 @@ function App() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1.5 }}
-            className="text-white text-4xl mb-5 md:text-7xl font-secondary"
+            className="text-my-gray text-4xl mb-5 md:text-7xl font-secondary"
           >
             Hello<span className="text-my-yellow">,</span> my name is{" "}
             <span className="text-my-yellow">Adam</span>
@@ -55,7 +55,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 1.5 }}
           >
-            <p className="text-white text-xl md:text-3xl font-primary mb-4">
+            <p className="text-my-gray text-xl md:text-3xl font-primary mb-4">
               I am self taught{" "}
               <span className="text-my-yellow">front-end web developer</span>{" "}
               from Slovakia, currently based in Brno and this is my portfolio

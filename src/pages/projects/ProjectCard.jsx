@@ -39,7 +39,7 @@ const ProjectCard = ({ project }) => {
             alt={project.img1.alt}
           />
         </div>
-        <div className="text-white flex-1 flex flex-col justify-between  text-center pt-8 lg:text-left">
+        <div className="text-my-gray flex-1 flex flex-col justify-between  text-center pt-8 lg:text-left">
           <div>
             <p className="text-lg mb-2">{project.description}</p>
             <div className="flex">

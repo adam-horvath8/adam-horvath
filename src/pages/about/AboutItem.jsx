@@ -20,7 +20,7 @@ const AboutItem = ({ item }) => {
       variants={itemsVariants}
       initial="hidden"
       animate={mainControls}
-      className="text-white p-1 mb-5 lg:flex"
+      className="text-my-gray p-1 mb-5 lg:flex"
     >
       <img
         className="mb-4 shadow-yellow lg:w-1/2"
