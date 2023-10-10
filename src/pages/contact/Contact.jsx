@@ -1,13 +1,10 @@
 import React from "react";
 import { useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, useScroll } from "framer-motion";
 
 import contactData from "../../data/contactData";
 
 import ContactCard from "./ContactCard";
-
-import linkedIn from "../../assets/linkedin.svg";
-import gitHub from "../../assets/git-hub.svg";
 
 const Contact = ({ pagesVariants }) => {
   const ref = useRef(null);
@@ -21,6 +18,13 @@ const Contact = ({ pagesVariants }) => {
     }
   }, [isInView]);
 
+  const info = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1,33 1"],
+  });
+
   return (
     <motion.div
       id="contact"
@@ -32,7 +36,13 @@ const Contact = ({ pagesVariants }) => {
     >
       <h2 className="page-heading">Contact</h2>
 
-      <motion.div>
+      <motion.div
+        ref={info}
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+        }}
+      >
         <h3 className="text-my-yellow text-center text-xl">
           Thanks for visiting my web site!
         </h3>
@@ -40,10 +50,16 @@ const Contact = ({ pagesVariants }) => {
           Let's get in touch
         </p>
         <div className="flex flex-wrap ">
-          <a className="w-full md:w-1/2 lg:w-1/4" href={`tel:${contactData.tel}`}>
+          <a
+            className="w-full md:w-1/2 lg:w-1/4"
+            href={`tel:${contactData.tel}`}
+          >
             <ContactCard icon={contactData.telIcon} text={contactData.tel} />
           </a>
-          <a className="w-full md:w-1/2 lg:w-1/4" href={`mailto:${contactData.email}`}>
+          <a
+            className="w-full md:w-1/2 lg:w-1/4"
+            href={`mailto:${contactData.email}`}
+          >
             <ContactCard
               icon={contactData.emailIcon}
               text={contactData.email}

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import skillsData from "../../data/skillsData";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import itemsVariants from "../../data/itemsAnimation";
 
 const skillsVariants = {
@@ -20,22 +20,19 @@ const skillsVariants = {
 
 const Skills = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView]);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1,33 1"],
+  });
 
   return (
     <motion.div
-      variants={itemsVariants}
-      initial="hidden"
-      animate={mainControls}
       ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
     >
       <h2 className="text-my-yellow text-3xl text-center m-10">Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-4 bg-my-yellow md:p-16 rounded-3xl">

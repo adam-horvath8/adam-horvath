@@ -1,25 +1,21 @@
-import React, { useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
-import itemsVariants from "../../data/itemsAnimation";
+import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 const AboutItem = ({ item }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
-  const mainControls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView]);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1,33 1"],
+  });
 
   return (
     <motion.div
       ref={ref}
-      variants={itemsVariants}
-      initial="hidden"
-      animate={mainControls}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
       className="text-my-gray p-1 mb-5 lg:flex"
     >
       <img

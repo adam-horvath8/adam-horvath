@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useInView, useAnimation, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import projectsData from "../../data/projectsData";
 import ProjectCard from "./ProjectCard";
@@ -15,6 +15,7 @@ const Projects = ({ pagesVariants }) => {
       mainControls.start("visible");
     }
   }, [isInView]);
+
   return (
     <motion.div
       id="projects"
