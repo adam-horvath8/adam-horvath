@@ -16,4 +16,10 @@
   .page-heading {
     @apply text-4xl text-my-yellow text-center py-4 border-b mb-8 font-secondary;
   }
+  .nav-button {
+    @apply p-3 text-xl text-my-gray hover:text-my-yellow hover:border-b-2  opacity-100 min-h-[8vh] sm:text-2xl md:sm:text-3xl;
+  }
+  .active {
+    @apply text-my-yellow  border-b-2;
+  }
 }

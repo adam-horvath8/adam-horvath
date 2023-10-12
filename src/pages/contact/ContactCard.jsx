@@ -16,7 +16,7 @@ const ContactCard = ({ icon, text }) => {
       className="p-4 bg-my-blue flex flex-col items-center "
     >
       <motion.img className="w-1/3" src={icon} alt="" />
-      <span className="md:text-lg text-my-black">{text}</span>
+      <span className=" text-xs sm:text-lg text-my-black">{text}</span>
     </motion.div>
   );
 };

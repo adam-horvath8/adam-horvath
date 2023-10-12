@@ -23,7 +23,7 @@ const Skills = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1,33 1"],
+    offset: ["0 3", "1,33 1"],
   });
 
   return (
@@ -34,7 +34,7 @@ const Skills = () => {
         opacity: scrollYProgress,
       }}
     >
-      <h2 className="text-my-yellow text-3xl text-center m-10">Skills</h2>
+      <h2 className="text-my-yellow text-3xl text-center mb-10 md:m-10">Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-4 bg-my-yellow md:p-16 rounded-3xl">
         {skillsData.map((skill, index) => (
           <motion.div

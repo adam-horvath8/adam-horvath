@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ButtonPrimary from "./ButtonPrimary";
 import { motion } from "framer-motion";
 
 const Navbar = ({ scrollToSection }) => {
+  const [activeLink, setActiveLink] = useState("about");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const pageEls = document.querySelectorAll(".page");
+
+      pageEls.forEach((pageEl) => {
+        if (
+          window.scrollY >= pageEl.offsetTop &&
+          window.scrollY < pageEl.offsetTop + pageEl.clientHeight
+        ) {
+          setActiveLink(pageEl.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <motion.nav
       initial={{ y: "-100vh" }}
@@ -17,13 +40,25 @@ const Navbar = ({ scrollToSection }) => {
         className="flex justify-evenly p-1 pr-5 font-primary"
       >
         <li onClick={() => scrollToSection("about")}>
-          <ButtonPrimary text="About" />
+          <ButtonPrimary
+            text="About"
+            href="#about"
+            isActive={activeLink === "about"}
+          />
         </li>
         <li onClick={() => scrollToSection("projects")}>
-          <ButtonPrimary text="Projects" />
+          <ButtonPrimary
+            text="Projects"
+            href="#projects"
+            isActive={activeLink === "projects"}
+          />
         </li>
         <li onClick={() => scrollToSection("contact")}>
-          <ButtonPrimary text="Contact" />
+          <ButtonPrimary
+            text="Contact"
+            href="#contact"
+            isActive={activeLink === "contact"}
+          />
         </li>
       </motion.ul>
     </motion.nav>

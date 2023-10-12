@@ -2,6 +2,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Projects from "./pages/projects/Projects";
 import headerImg from "./assets/lift1400.jpg";
+
 import { motion } from "framer-motion";
 
 import Navbar from "./components/Navbar";
@@ -10,15 +11,15 @@ import ButtonSecondary from "./components/ButtonSecondary";
 import cvImg from "./assets/cv-img.svg";
 import cv from "/cv-adam-horvath.pdf";
 
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
 function App() {
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   const pagesVariants = {
     hidden: {
       x: "-98vw",

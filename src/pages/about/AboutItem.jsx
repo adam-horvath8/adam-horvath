@@ -6,7 +6,7 @@ const AboutItem = ({ item }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1,33 1"],
+    offset: ["0 2", "1,33 1"],
   });
 
   return (

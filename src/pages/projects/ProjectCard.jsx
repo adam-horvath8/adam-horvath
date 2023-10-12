@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1,33 1"],
+    offset: ["0 5", "1,33 1"],
   });
 
   return (
@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
         scale: scrollYProgress,
         opacity: scrollYProgress,
       }}
-      className="mb-10"
+      className="md:mb-10"
     >
       <h3 className="text-my-yellow text-2xl">{project.title}</h3>
       <div className="flex flex-col justify-between mb-10 md:relative lg:flex-row">
