@@ -1,10 +1,5 @@
 # $project
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+$This is my personal portfolio page. Browse through the page and see all the relevant projects I have made so far. You can also find out about my self-taught web development journey.
 
-Look how easy it is to use:
-
-    import project
-    # Get your stuff done
-    project.do_stuff()
+See in live preview: https://adam-horvath.netlify.app
