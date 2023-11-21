@@ -10,8 +10,52 @@ import webpackBlack from "../assets/webpack-black.svg";
 import reacRouterBlack from "../assets/reactrouter-black.svg";
 import memoryDesktop from "../assets/memory-desktop.png";
 import memoryMobile from "../assets/memory-mobile.png";
+import socraticCircle from "../assets/socratic-circle.png";
+import socraticMobile from "../assets/socratic-mobile.png";
+import reduxBlack from "../assets/redux-black.svg";
+import typescriptBlack from "../assets/typescript-black.svg";
+import firebaseBlack from "../assets/firebase-black.svg";
 
 const projectsData = [
+  {
+    img1: {
+      url: socraticCircle,
+      alt: "socratic circle picture",
+    },
+    img2: {
+      url: socraticMobile,
+      alt: "socratic circle picture",
+    },
+    title: "Socratic Circle",
+    description:
+      "Socratic Circle is a social media website for philosophers to connect and share their work. The back-end runs on Firebase. The project is written in Typescript. I used Redux and the Redux Toolkit for state management. In this project, I learned CRUD operations as well as how authentication works.",
+    technologies: [
+      {
+        url: typescriptBlack,
+        name: "Typescript",
+        alt: "Typescript",
+      },
+      {
+        url: reduxBlack,
+        name: "Redux",
+        alt: "Redux",
+      },
+      {
+        url: firebaseBlack,
+        name: "Firebase",
+        alt: "Firebase",
+      },
+
+      { url: reactBlack, alt: "React", name: "React" },
+      {
+        url: reacRouterBlack,
+        name: "React Router",
+        alt: "React Router",
+      },
+    ],
+    live: "https://socraticcircle-6ba8b.web.app/",
+    code: "https://github.com/adam-horvath8/Socratic-circle",
+  },
   {
     img1: {
       url: cartDesktop,
@@ -23,7 +67,7 @@ const projectsData = [
     },
     title: "Atlantis e-shop",
     description:
-      "E-shop Atlantis was a shopping cart project that helped me elevate my React skills. While doing this web page I learned to employ react routing with React Router library. I deepned my understanding of React states, fetching data in react and useEffect hook. As an state management tool I used Context API.",
+      "E-shop Atlantis was a shopping cart project that helped me elevate my React skills. While doing this web page, I learned to employ React routing with the React Router library. I deepened my understanding of React states, fetching data in React, and using the useEffect hook. As a state management tool, I used the Context API.",
     technologies: [
       { url: reactBlack, alt: "React", name: "React" },
       {
@@ -85,7 +129,7 @@ const projectsData = [
     },
     title: "Memory Cards",
     description:
-      "Weather Application is an app that I made using vanilla JS before I learned React. With this project I got deeper understanding of Object Oriented Programing. It was also my first encounter with fetching data from an open public API.",
+      "A memory card game is a game that challenges your memory. Try to click on all the cards without clicking on the same card twice, and you win! With this project, I got familiar with the useEffect hook.",
     technologies: [{ url: reactBlack, name: "React" }],
     live: "https://cars-memory-game.netlify.app",
     code: "https://github.com/adam-horvath8/Memory-card",

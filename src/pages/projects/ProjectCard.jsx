@@ -40,7 +40,7 @@ const ProjectCard = ({ project }) => {
         <div className="text-my-gray flex-1 flex flex-col justify-between  text-center pt-8 lg:text-left">
           <div>
             <p className="text-lg mb-2">{project.description}</p>
-            <div className="flex">
+            <div className="grid grid-cols-2 gap-2  lg:flex ">
               {project.technologies.map((tech) => (
                 <SkillsProject key={tech.name} tech={tech} />
               ))}
