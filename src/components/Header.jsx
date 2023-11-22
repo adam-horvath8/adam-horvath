@@ -5,7 +5,7 @@ import ButtonSecondary from "./ButtonSecondary";
 import { motion } from "framer-motion";
 
 import cvImg from "../assets/cv-img.svg";
-import cv from "/cv-adam-horvath.pdf";
+import cv from "../../public/CV-Adam-Horvath.pdf";
 
 export default function Header({ headerImg, scrollToSection }) {
   return (
