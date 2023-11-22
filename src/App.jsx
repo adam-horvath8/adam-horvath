@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import ButtonSecondary from "./components/ButtonSecondary";
 
 import cvImg from "./assets/cv-img.svg";
-import cv from "/cv-adam-horvath.pdf";
+import cv from "/CV-Adam-Horvath.pdf";
 
 function App() {
   function scrollToSection(sectionId) {
