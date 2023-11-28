@@ -1,7 +1,7 @@
 import school from "../assets/school.jpg";
 import sea from "../assets/sea1400.jpg";
 import odin from "../assets/odin.png";
-import coffe from "../assets/coffe.jpg";
+import coffe from "../assets/hero-img.jpg";
 
 const aboutData = [
   {
@@ -27,7 +27,7 @@ const aboutData = [
   },
   {
     url: coffe,
-    alt: "Autor sitting on the bench drinking coffe",
+    alt: "Autor sitting on the bench looking at something in the distance",
     text: "After a year and a half of studing while having a full time job I came to the end of The Odin Project syllabus. Now I am looking for someone who takes a chance on me. I still have a lot to learn, but I'm willing to do my best to be usefull member of any team.",
     title: "Future",
     id: 4,
