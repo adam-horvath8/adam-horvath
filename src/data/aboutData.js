@@ -21,14 +21,14 @@ const aboutData = [
   {
     url: odin,
     alt: "Picture of the Odin Project webpage",
-    text: "The main resource on my self tougth journey was The Odin Project. It is great resource with the exact syllabus that gives you a path to finally get a job as a web developer. I chose the path of javascript and react",
+    text: "The main resource on my self tougth journey was The Odin Project. It is great resource with the exact syllabus that gives you a path to finally get a job as a web developer. I chose the path of javascript.",
     title: "Main Resource",
     id: 3,
   },
   {
     url: coffe,
     alt: "Autor sitting on the bench looking at something in the distance",
-    text: "After a year and a half of studing while having a full time job I came to the end of The Odin Project syllabus. Now I am looking for someone who takes a chance on me. I still have a lot to learn, but I'm willing to do my best to be usefull member of any team.",
+    text: "After two years of studying while having a full-time job, I am ready to take on a bigger challenge and help you with your projects. If you are looking for a new team member, please look no further. I am a hardworking person who loves learning new technologies, and I will do my best to make your project a success.",
     title: "Future",
     id: 4,
   },
